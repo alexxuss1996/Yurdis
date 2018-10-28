@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\alexxuss\bin;C:\Python27;C:\Python27\Scripts;C:\Ruby23-x64\bin;C:\Program Files (x86)\Intel\TXE Components\TCS;C:\Program Files\Intel\TXE Components\TCS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\wget;C:\Users\alexxuss\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\cygwin64\bin;C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-binaries\php\php704vc14x86x180908143619;C:\Program Files (x86)\Yarn\bin;C:\Users\alexxuss\AppData\Local\Programs\Python\Python35\Scripts;C:\Users\alexxuss\AppData\Local\Programs\Python\Python35;C:\Users\alexxuss\AppData\Local\Microsoft\WindowsApps;C:\Users\alexxuss\AppData\Roaming\npm;C:\Users\alexxuss\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\alexxuss\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.1.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onread (net.js:659:25)
+
+npm manifest: 
+  {
+    "name": "gulp-project",
+    "version": "1.0.0",
+    "description": "Yurdis",
+    "devDependencies": {
+      "browser-sync": "^2.26.3",
+      "gulp": "^3.9.1",
+      "gulp-autoprefixer": "^6.0.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-minify-css": "^1.2.4",
+      "gulp-rename": "^1.4.0",
+      "gulp-sass": "^4.0.2",
+      "gulp-uglifyjs": "^0.6.2",
+      "node-bourbon": "^4.2.8"
+    },
+    "main": "index.js",
+    "repository": "https://github.com/alexxuss1996/Yurdis.git",
+    "author": "alexxuss1996 <alekseymelnych132@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
