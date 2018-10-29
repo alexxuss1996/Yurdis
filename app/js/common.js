@@ -1,5 +1,7 @@
 $(function() {
 
+
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
@@ -36,5 +38,11 @@ $(function() {
 	};
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	$(".topline .sf-menu").superfish({
+		cssArrows: false,
+		hoverClass: "no-class",
+		delay: 100
+	});
 
 });
