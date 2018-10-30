@@ -1,5 +1,6 @@
 @import "bourbon"
 @import "vars.sass"
+@import "../app/libs/OwlCarousel2/dist/assets/owl.carousel.css"
 
 body
 	font-size: 16px
@@ -9,7 +10,6 @@ body
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
 	color: #111
-	background-color: $main-color
 
 .text-right
 	text-align: right
@@ -17,9 +17,8 @@ body
 .text-left
 	text-align: left
 
-
-
-h1, h2, h3, h4, h5, h6, .button
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, .button
 	font-family: "RobotoCondensedBold", sans-serif
 	font-weight: normal
 	text-transform: uppercase
@@ -28,13 +27,13 @@ b, strong
 	font-family: "RobotoBold", sans-serif
 	font-weight: normal
 
-
 .button
 	background-color: $accent-color
 	color: #111
-	padding: 6px 22px
+	padding: 10px 30px
 	display: inline-block
 	position: relative
+	border: none
 	border-radius: 2px
 	text-align: center
 	font-size: em(16px)
@@ -53,10 +52,11 @@ b, strong
 		color: #222
 		text-decoration: none
 	&:hover
-		background-color: lighten($accent-color, 5%)
+		background-color: lighten($accent-color, 12%)
 	&:active
 		background-color: darken($accent-color, 5%)
 	&-small
+		padding: 6px 22px
 		font-size: em(14px)
 		&::after
 			height: 2px
@@ -64,11 +64,22 @@ b, strong
 .topline
 	text-align: center
 	background-color: $main-color
+	position: relative
+	z-index: 2
 	border-bottom: 1px solid lighten($main-color, 6%)
 	ul, li
 		list-style-type: none
 		padding: 0
 		margin: 0
+		a
+			color: #fff
+			border: none
+			background-color: $main-color
+			padding: 25px 28px 
+			border-bottom: 1px solid lighten($main-color, 5%)
+			&:hover
+				color: $accent-color
+				background-color: darken($main-color, 3%)
 	.sf-menu
 		display: inline-block
 		float: none
@@ -89,21 +100,14 @@ b, strong
 						.fa
 							margin-left: 2px
 							font-size: em(11px)
-		a
-			color: #fff
-			border: none
-			background-color: $main-color
-			padding: 25px 28px 
-			border-bottom: 1px solid lighten($main-color, 5%)
-			&:hover
-				color: $accent-color
-				background-color: darken($main-color, 3%)
 	
 .top-panel
 	padding: 50px 0
 	background-color: rgba(lighten($main-color, 2%), .8)
 	color: #fff
 	position: relative
+	z-index: 1
+	box-shadow: 0 5px 0 5px rgba(#fff, .03)
 	&-content
 		z-index: 1
 		position: relative
@@ -180,6 +184,113 @@ b, strong
 
 .top-button
 	margin-top: 22px
+
+.slider-wrap
+	.slider-nav-container
+		position: relative
+	.slider-nav
+		position: absolute
+		width: 100%
+		z-index: 10
+		font-size: 36px
+		color: #fff
+		> div
+			cursor: pointer
+			position: absolute
+			top: 160px
+			&:last-child
+				right: 0
+
+		
+
+.slider
+	position: absolute
+	top: 0
+	width: 100%
+	.owl-dots
+		position: absolute
+		bottom: 50px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			cursor: pointer
+			margin: 0 3px
+			transition: background-color .25s ease
+			width: 14px
+			height: 14px
+			border-radius: 10em
+			background-color: darken($main-color, 10%)
+			&.active
+				background-color: $accent-color
+	.slide-wrap
+		float: left
+		&.active
+			h2
+				opacity: 1
+				left: 0
+			p
+				left: 0
+			.slide-img-wrap
+				transform: scale(1)
+				opacity: 1
+	.slide
+		position: relative
+		color: #fff
+		padding-top: 300px
+		padding-bottom: 100px
+		h2
+			font-size: em(48px)
+			margin-top: 0
+			margin-bottom: 22px
+			font-family: "RobotoCondensedLight", sans-serif
+			line-height: em(19px)
+			transition: all 1s ease
+			position: relative
+			left: 100px
+			opacity: 0
+			&:first-line
+				color: $accent-color
+		p
+			font-family: "RobotoLight", sans-serif
+			margin-bottom: 40px
+			opacity: 0.75
+			transition: all 1s ease
+			transition-delay: .5s
+			position: relative
+			left: 50px
+		&-bg
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-size: cover
+			width: 100%
+			&::before
+				content: ''
+				background-color: $main-color
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				height: 100%
+				width: 100%
+				opacity: 0.85
+		&-content
+			position: relative
+			z-index: 1
+			padding-top: 60px
+
+.slide-img-wrap
+	max-width: 100%
+	padding-top: 12px
+	opacity: 0
+	transform: scale(0.8)
+	transition: all 1s ease
+	transition-delay: .5s
+
 
 .hidden
 	display: none
