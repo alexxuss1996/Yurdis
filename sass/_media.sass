@@ -4,14 +4,43 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	
+	.top-button
+		margin-top: 8px
+	.top-phone
+		font-size: em(16px)
+		span
+			font-size: em(13px)
+	.slider
+		.slide
+			h2
+				font-size: em(40px)
+			p
+				font-size: em(14px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.top-panel
+		padding: 10px 0 20px
+	.logo
+		img
+			padding-top: 12px
+			width: 100px
 
+	.slider
+		.slide
+			padding-top: 130px
+			h2, 
+				font-size: em(36px)
+		.slider-content
+			padding-top: 40px
+	.slider-wrap
+		.slider-nav
+			div
+				top: 120px
 
+			
+		
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	
@@ -37,9 +66,17 @@
 		animation: none !important
 
 
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.top-phone
+		font-size: em(14px)
+		margin-right: 5px
+
+	.slider-wrap
+		.slider-nav
+			div
+				top: 140px
 
 
 /* Custom, iPhone Retina */

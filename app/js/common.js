@@ -7,6 +7,14 @@ $(function() {
 	});
 	
 
+	$(".mobile-mnu").click(function() {
+		var self = $(this).find(".toggle-mnu");
+		self.toggleClass("on");
+		$(".main-mnu").slideToggle();
+		return false;
+	});
+	
+
 	var owl =	$(".slider");
 
 owl.owlCarousel({
@@ -15,8 +23,7 @@ owl.owlCarousel({
 		itemClass: "slide-wrap",
 		nav: false,
 		navText: "",
-		smartSpeed: 1000, 
-		autoplay: true
+		smartSpeed: 1000
 
 
 	});
