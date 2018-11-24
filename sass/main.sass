@@ -6,6 +6,8 @@
 @import "../app/libs/superfish/css/superfish.css"
 @import "../app/libs/font-awesome/scss/font-awesome.scss"
 @import "../app/libs/jQuery.mmenu/dist/jquery.mmenu.all.css"
+@import "../app/libs/css-hamburgers/_sass/hamburgers/hamburgers.scss"
+@import "../app/libs/css-hamburgers/_sass/hamburgers/types/_spring.scss"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -30,8 +32,13 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+	// MMenu Styles Here
 
+.mm-menu_offcanvas
+	z-index: 20
 
+#my-menu .fa
+	display: none
 
 //ALWAYS END
 @import "media"
