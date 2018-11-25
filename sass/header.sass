@@ -199,7 +199,7 @@ b, strong
 	.slider-nav-container
 		position: relative
 	.slider-nav
-		position: absolute
+		position: relative
 		width: 100%
 		z-index: 10
 		top: 170px
@@ -214,9 +214,10 @@ b, strong
 
 .slider
 	width: 100%
+	position: relative
 	.owl-dots
-		position: absolute
-		bottom: 100px
+		position: relative
+		bottom: 50px
 		width: 100%
 		text-align: center
 		.owl-dot
@@ -301,14 +302,6 @@ b, strong
 	transition: all 1s ease
 	transition-delay: .5s
 
-// Mobile menu
-.toggle-mnu 
-	display: block
-	width: 28px
-	height: 28px
-	float: left
-	margin-left: 10px
-
 .mobile-mnu
 	padding: 14px 0
 	cursor: pointer
@@ -325,16 +318,16 @@ b, strong
 		position: relative
 		top: 50%
 		left: 15px
+		float: left
 		.hamburger-box
 			display: block
 			.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after
 				color: $main-color
 				width: 34px
 				border-radius: 0
-				height: 2px
+				height: 2.5px
 			
 		
-
 
 .hidden
 	display: none

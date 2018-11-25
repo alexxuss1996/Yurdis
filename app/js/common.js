@@ -56,18 +56,20 @@ $(function() {
 
 
 	 
-	$(".sf-menu").after("<div id='my-menu'></div>");
-	$(".sf-menu").clone().appendTo("#my-menu");
+	
 
 	
 	$(".mobile-mnu").click(function() {
+
+		$(".sf-menu").after("<div id='my-menu'></div>");
+		$(".sf-menu").clone().appendTo("#my-menu");
 
 		$("#my-menu").mmenu({
 			navbar : {
 				title : "Меню"
 			},
 			language : "ru",
-			extensions : ["theme-white", "fx-menu-slide", "pagedim-black"],
+			extensions : ["theme-dark", "fx-menu-slide", "pagedim-black"],
 			hooks: {
 				"open:start": function() {
 					$(".hamburger").addClass("is-active");

@@ -6,8 +6,7 @@
 @import "../app/libs/superfish/css/superfish.css"
 @import "../app/libs/font-awesome/scss/font-awesome.scss"
 @import "../app/libs/jQuery.mmenu/dist/jquery.mmenu.all.css"
-@import "../app/libs/css-hamburgers/_sass/hamburgers/hamburgers.scss"
-@import "../app/libs/css-hamburgers/_sass/hamburgers/types/_spring.scss"
+
 
 *::-webkit-input-placeholder
 	color: #666
@@ -37,8 +36,24 @@ body textarea:required:valid
 .mm-menu_offcanvas
 	z-index: 20
 
-#my-menu .fa
+.mm-menu .mm-listitem__text .fa
 	display: none
+
+.mm-menu .mm-listitem,
+.mm-menu .mm-navbar > a,
+.mm-menu .mm-counter
+	color: $accent-color
+
+.mm-menu .mm-listitem_selected
+	background-color: darken($main-color, 3%)	
+
+.mm-menu .mm-listitem
+	transition: background-color .35s ease
+	&:hover, .mm-listitem_selected
+		background-color: darken($main-color, 3%)
+
+.mm-menu, .mm-navbar, .mm-panel, .mm-panels
+	background-color: $main-color
 
 //ALWAYS END
 @import "media"
