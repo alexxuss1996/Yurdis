@@ -38,6 +38,7 @@ gulp.task('scripts', function() {
 		'./app/libs/superfish/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu/dist/jquery.mmenu.all.js',
 		'./app/libs/equalheights/equalheights.js',
+		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js
