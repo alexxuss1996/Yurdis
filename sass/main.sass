@@ -6,6 +6,7 @@
 @import "../app/libs/superfish/css/superfish.css"
 @import "../app/libs/font-awesome/scss/font-awesome.scss"
 @import "../app/libs/jQuery.mmenu/dist/jquery.mmenu.all.css"
+@import "../app/libs/css-hamburgers/_sass/hamburgers/hamburgers.scss"
 
 
 *::-webkit-input-placeholder
@@ -54,6 +55,88 @@ body textarea:required:valid
 
 .mm-menu, .mm-navbar, .mm-panel, .mm-panels
 	background-color: $main-color
+
+.mm-wrapper__blocker
+	cursor: pointer
+
+	/*---------------------------------------------*/
+
+.sect-servises
+	background-color: #f4f4f4
+
+.services-item
+	text-align: center
+	transition: all .5s ease
+	border: 5px solid lighten($main-color, 5%)
+	padding-bottom: 32px
+	position: relative
+	cursor: pointer
+	background-color: #fff
+	z-index: 1
+	&:hover
+		border-color: $accent-color
+		transform: scale(1.05)
+		z-index: 2
+		.service-item-stars
+			.fa
+				margin-left: 3px
+				color: $accent-color
+		.services-item-image::before
+			opacity: 0.72
+		.services-item-image
+			.fa
+				opacity: 0.4
+	h4
+		margin-bottom: 0
+		font-size: em(18px)
+
+.services-item-image
+	min-height: 190px
+	background-size: cover
+	position: relative
+	transition: all .5s ease
+	&::before
+		content: ''
+		position: absolute
+		transition: all .5s ease
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $main-color
+		opacity: 0
+	.fa
+		position: absolute
+		font-size: 22px
+		top: 50%
+		left: 50%
+		margin-left: -10px
+		margin-top: -10px
+		transition: opacity .5s ease
+		color: #fff
+		opacity: 0
+
+.services-item-wrapper
+	padding: 0
+
+.service-item-stars
+	display: inline-block
+	color: #b4b4b4
+	.fa
+		transition: all .5s ease
+		font-size: em(13px)
+.service-item-price
+	margin: 5px 0 26px
+	font-family: "RobotoCondensedBold", sans-serif
+	padding-left: 5px
+	position: relative
+	span
+		font-size: em(28px)
+	.fa
+		color: $accent-color
+		font-size: em(18px)
+		transition: all .5s ease
+
 
 //ALWAYS END
 @import "media"

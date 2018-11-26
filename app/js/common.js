@@ -6,8 +6,7 @@ $(function() {
 		delay: 200
 	});
 	
-	
-	
+
 	var owl =	$(".slider");
 	
 	owl.owlCarousel({
@@ -54,11 +53,6 @@ $(function() {
 		return false;
 	});
 
-
-	 
-	
-
-	
 	$(".mobile-mnu").click(function() {
 
 		$(".sf-menu").after("<div id='my-menu'></div>");
@@ -69,13 +63,13 @@ $(function() {
 				title : "Меню"
 			},
 			language : "ru",
-			extensions : ["theme-dark", "fx-menu-slide", "pagedim-black"],
+			extensions : ["theme-dark", "fx-menu-slide"],
 			hooks: {
 				"open:start": function() {
 					$(".hamburger").addClass("is-active");
 					
 			 },
-			 "close:before": function() {
+			 "close:after": function() {
 					$(".hamburger").removeClass("is-active");
 			 }
 			}
@@ -87,16 +81,10 @@ $(function() {
 
 		var mmAPI = $("#my-menu").data( "mmenu" );
 		mmAPI.open();
-
-	
-		
 	});
-	
 
-	
-	
-	
-	
+	$(".services-item h4").equalHeights();
+
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
