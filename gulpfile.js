@@ -10,12 +10,12 @@ var gulp         = require('gulp'),
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
-				server: {
-						baseDir: "./app"
-				},
-				notify: false
+				server: { baseDir: './'},
+				port: 3000,
+				notify: false,
 		});
 });
+
 
 gulp.task('styles', function () {
 	return gulp.src('sass/*.sass')
@@ -49,7 +49,8 @@ gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html').on('change', browserSync.reload);
+	gulp.watch('*.html').on('change', browserSync.reload);
+	gulp.watch('*.php').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
