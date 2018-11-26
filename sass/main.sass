@@ -93,6 +93,7 @@ body textarea:required:valid
 .services-item-image
 	min-height: 190px
 	background-size: cover
+	background-position: top center
 	position: relative
 	transition: all .5s ease
 	&::before
@@ -136,6 +137,87 @@ body textarea:required:valid
 		color: $accent-color
 		font-size: em(18px)
 		transition: all .5s ease
+
+
+.sect-universal
+	padding: 60px 0
+	background-color: #efefef
+	background-size: cover
+	background-position: top center
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		opacity: 0.85
+	h2
+		font-size: em(40px)
+		line-height: em(18px)
+		margin: 
+			top: 20px
+			bottom: 45px
+
+.sect-news
+	background-size: cover
+	background-position: top center
+	color: #fff
+	padding: 40px 0 60px
+	&::before
+		background-color: $main-color
+
+.news-item
+	text-align: center
+	color: #111
+	background-color: #efefef
+	padding: 1px 1px 25px 1px
+	display: block
+	&:hover
+		.news-item-image
+			.fa
+				opacity: 0.42
+		.news-item-image
+			&::before
+				opacity: 0.7
+	.news-item-image
+		min-height: 180px
+		background-size: cover
+		background-position: center center
+		position: relative
+		transition: all .5s ease
+		&::before
+			content: ''
+			position: absolute
+			transition: all .5s ease
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $main-color
+			opacity: 0
+		.fa
+			position: absolute
+			font-size: 22px
+			top: 50%
+			left: 50%
+			margin-left: -10px
+			margin-top: -10px
+			transition: opacity .5s ease
+			color: #fff
+			opacity: 0
+
+
+.news-item-text
+	padding: 0 15px
+	margin-bottom: 25px
+	p
+		font-size: em(16px)
+		
+	
+
+
+
 
 
 //ALWAYS END

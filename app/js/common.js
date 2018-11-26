@@ -84,6 +84,7 @@ $(function() {
 	});
 
 	$(".services-item h4").equalHeights();
+	$(".news-item .news-item-text").equalHeights();
 
 	//Chrome Smooth Scroll
 	try {
