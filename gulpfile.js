@@ -5,6 +5,7 @@ var gulp         = require('gulp'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
+		cleanCSS		 = require('gulp-clean-css'),
 		uglify       = require('gulp-uglifyjs');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
@@ -23,6 +24,7 @@ gulp.task('styles', function () {
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
+	.pipe(cleanCSS())
 	.pipe(minifycss())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream());
@@ -32,9 +34,6 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'./app/libs/modernizr/modernizr.js',
 		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/waypoints/waypoints.min.js',
-		'./app/libs/animate/animate-css.js',
-		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/OwlCarousel2/dist/owl.carousel.min.js',
 		'./app/libs/superfish/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu/dist/jquery.mmenu.all.js',
