@@ -85,6 +85,7 @@ $(function() {
 
 	$(".services-item h4").equalHeights();
 	$(".news-item .news-item-text").equalHeights();
+	$(".link-item").equalHeights();
 
 	//Chrome Smooth Scroll
 	try {
