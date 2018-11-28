@@ -53,6 +53,12 @@ $(function() {
 		return false;
 	});
 
+
+	$(".sf-menu  > li").click(function () {
+		$(".sf-menu > li").removeClass("active");
+		$(this).toggleClass("active");
+	})
+
 	$(".mobile-mnu").click(function() {
 
 		$(".sf-menu").after("<div id='my-menu'></div>");

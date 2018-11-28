@@ -100,6 +100,14 @@ b, strong
 			padding: 0
 			margin: 0
 			&.active
+				ul.recursive 
+					li
+						a
+							color: #fff
+							background-color: $main-color
+							&:hover
+								color: $accent-color
+								background-color: darken($main-color, 3%) 
 				a
 					color: $accent-color
 			> ul
