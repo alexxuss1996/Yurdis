@@ -6,6 +6,7 @@ var gulp         = require('gulp'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		cleanCSS		 = require('gulp-clean-css'),
+		imagemin		 = require('gulp-imagemin'),
 		uglify       = require('gulp-uglifyjs');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
@@ -16,6 +17,14 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		});
 });
 
+
+gulp.task('compress', function() {
+	gulp.src('app/img/*')
+	.pipe(imagemin({
+		progressive: true
+	}))
+	.pipe(gulp.dest('app/img/'));
+});
 
 gulp.task('styles', function () {
 	return gulp.src('sass/*.sass')
@@ -48,9 +57,9 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/img/*', ['compress']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('*.html').on('change', browserSync.reload);
-	gulp.watch('*.php').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
